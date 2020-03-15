@@ -24,8 +24,8 @@ export default {
 
   data: () => ({
     technologies: [
-      { id: 1, name: 'macOS', icon: '/icons/macos.svg' },
-      { id: 2, name: 'VSCode', icon: '/icons/vscode.svg' },
+      { id: 1, name: 'macOS', icon: 'icons/macos.svg' },
+      { id: 2, name: 'VSCode', icon: 'icons/vscode.svg' },
       { id: 3, name: 'Go', icon: 'icons/go.svg' },
       { id: 4, name: 'gRPC', icon: 'icons/grpc.svg' },
       { id: 5, name: 'PHP', icon: 'icons/php.svg' },
