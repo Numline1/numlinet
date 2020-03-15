@@ -1,0 +1,18 @@
+<template>
+  <div class="flex">
+    <h1>Numlinet</h1>
+    <div class="blinking">_</div>
+  </div>
+</template>
+
+<style>
+.blinking {
+  animation: blinking 1s linear infinite;
+}
+
+@keyframes blinking {
+  50% {
+    opacity: 0;
+  }
+}
+</style>
