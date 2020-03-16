@@ -4,27 +4,28 @@
       About
     </p>
 
-    <div class="container mx-auto flex items-center mt-12 pb-12">
+    <div class="container mx-auto flex items-center mt-12 mb-24">
       <img
         class="rounded-full border-2 border-white p-1 mr-16 w-64 h-64"
-        src="https://placekitten.com/400/400"
+        src="me.png"
         alt="Martin"
       />
 
       <div class="text-lg tracking-wide">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-          molestiae maxime, reprehenderit nulla possimus nam rem nostrum. Est
-          rem et numquam. Placeat minima porro modi, iusto autem libero laborum
-          debitis.Temporibus corporis veniam odio repudiandae.
+          I've been designing and developing apps for over 10 years, using a
+          broad range of languages, tools, operating systems and cloud-based
+          solutions. I always seek quality output and customer satisfaction.
         </p>
 
         <p class="mt-8">
-          Iusto voluptas magnam incidunt aspernatur nihil ab accusamus officia
-          quas, quod quaerat eligendi nam voluptatem aliquam vel amet quasi
-          porro dolorem recusandae dolores! Dolore, maxime! Lorem ipsum dolor
-          sit amet consectetur adipisicing elit. Rerum ex molestiae vero
-          voluptatibus eligendi dolorem nisi inventore quod!
+          I'm always looking for new opportunities and projects, feel free to
+          <a
+            class="border-b border-dashed border-gray-900"
+            href="mailto:me@numli.net"
+            >drop me an e-mail</a
+          >
+          and I'll get back to you.
         </p>
       </div>
     </div>
