@@ -1,11 +1,7 @@
 <template>
   <div class="bg-nn-primary md:mt-12 py-12 text-gray-400">
-    <p class="mt-4 text-3xl text-center">
-      About
-    </p>
-
     <div
-      class="container mx-auto flex flex-col md:flex-row items-center mt-12 mb-4 md:mb-24"
+      class="container mx-auto flex flex-col md:flex-row items-center mt-16 mb-4 md:mb-24"
     >
       <img
         class="rounded-full border-2 border-white p-1 md:mr-16 w-64 h-64"
