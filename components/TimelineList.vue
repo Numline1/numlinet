@@ -33,8 +33,8 @@ export default {
         description: null,
         company: null,
         bar: {
-          height: 2,
-          color: 'red-800'
+          height: 'h-2',
+          color: 'bg-red-800'
         }
       },
       {
@@ -43,8 +43,8 @@ export default {
         description: 'Lorem ipsum dolor sit amet.',
         company: 'Ajilon',
         bar: {
-          height: 16,
-          color: 'red-500'
+          height: 'h-16',
+          color: 'bg-red-500'
         }
       },
       {
@@ -53,8 +53,8 @@ export default {
         description: 'Lorem ipsum dolor sit amet.',
         company: 'HP/HPE',
         bar: {
-          height: 16,
-          color: 'orange-500'
+          height: 'h-16',
+          color: 'bg-orange-500'
         }
       },
       {
@@ -63,8 +63,8 @@ export default {
         description: 'Lorem ipsum dolor sit amet.',
         company: 'KBS Development',
         bar: {
-          height: 16,
-          color: 'orange-300'
+          height: 'h-16',
+          color: 'bg-orange-300'
         }
       },
       {
@@ -73,8 +73,8 @@ export default {
         description: 'Lorem ipsum dolor sit amet.',
         company: 'DCG',
         bar: {
-          height: 16,
-          color: 'yellow-200'
+          height: 'h-16',
+          color: 'bg-yellow-200'
         }
       },
       {
@@ -83,8 +83,8 @@ export default {
         description: 'Lorem ipsum dolor sit amet.',
         company: null,
         bar: {
-          height: 16,
-          color: 'green-400'
+          height: 'h-16',
+          color: 'bg-green-400'
         }
       }
     ]

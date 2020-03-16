@@ -2,7 +2,7 @@
   <div class="flex flex-col items-center">
     <div
       class="w-2"
-      :class="`h-${timelineItem.bar.height} bg-${timelineItem.bar.color}`"
+      :class="[timelineItem.bar.height, timelineItem.bar.color]"
     ></div>
 
     <p class="cursor-pointer my-4 border-b border-dashed">

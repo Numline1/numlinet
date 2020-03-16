@@ -16,7 +16,7 @@
       </div>
     </div>
 
-    <div class="rounded self-center w-1/2" :class="`bg-${project.color}`">
+    <div class="rounded self-center w-1/2" :class="project.color">
       <img class="pl-2 pt-2" :src="project.image" :alt="project.name" />
     </div>
   </div>

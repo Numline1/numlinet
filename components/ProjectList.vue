@@ -26,7 +26,7 @@ export default {
     projects: [
       {
         id: 1,
-        color: 'red-500',
+        color: 'bg-red-500',
         image: '/projects/donappetit.png',
         name: 'Don Appetit',
         description: `<p>Don Appetit was created as an entry point for people seeking quality restaurant experience in Czechia and Slovakia.
@@ -41,7 +41,7 @@ export default {
       },
       {
         id: 2,
-        color: 'blue-500',
+        color: 'bg-blue-500',
         image: '/projects/sponsoronline.png',
         name: 'Sponsor.Online',
         description: `<p>Sponsor.Online is the ultimate football sponsorship platform. It provides a link between brands and professional football teams, allowing for easier communication and sales between these two parties.</p>
@@ -53,7 +53,7 @@ export default {
       },
       {
         id: 3,
-        color: 'pink-500',
+        color: 'bg-pink-500',
         image: '/projects/socializr.png',
         name: 'Socializr',
         description: `<p>Socializr is a complex set of microservices used to gather and analyse data from social media. As social media is part of our everyday lives, it can provide useful insights into how well products are performing.</p>
@@ -68,7 +68,7 @@ export default {
       },
       {
         id: 4,
-        color: 'green-500',
+        color: 'bg-green-500',
         image: '/projects/dannygo.png',
         name: 'Danny GO travel',
         description: `<p>Danny GO travel is one of the very few companies specifically focused on online travel on Slovak market, offering all inclusive holidays using social media.</p>
@@ -83,7 +83,7 @@ export default {
       },
       {
         id: 5,
-        color: 'purple-500',
+        color: 'bg-purple-500',
         image: '/projects/limedeck.png',
         name: 'LimeDeck',
         description: `<p>LimeDeck is a great tool to organize everything from your everyday life to a set of complex and messy work meetings and tasks and large companies.</p>
@@ -102,7 +102,7 @@ export default {
       },
       {
         id: 6,
-        color: 'orange-500',
+        color: 'bg-orange-500',
         image: '/projects/dshorty.png',
         name: 'DShorty',
         description: `<p>DShorty was developed to be (yet another) URL shortener. The goal was to finally have an incredibly lightweight and modern URL application with an ability, well, to shorten links</p>
