@@ -5,7 +5,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .blinking {
   animation: blinking 1s linear infinite;
 }
