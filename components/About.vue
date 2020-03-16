@@ -10,10 +10,10 @@
           alt="Martin"
         />
 
-        <p class="mt-4 text-xl">Martin Krajčovič</p>
+        <p class="mt-4 text-xl text-center">Martin Krajčovič</p>
       </div>
 
-      <div class="p-8 md:p-0 text-lg tracking-wide">
+      <div class="p-8 md:p-0 text-lg tracking-wide text-center">
         <p>
           I've been designing and developing apps for over 10 years, using a
           broad range of languages, tools, operating systems and cloud-based
