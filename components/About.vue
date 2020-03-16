@@ -3,11 +3,15 @@
     <div
       class="container mx-auto flex flex-col md:flex-row items-center mt-16 mb-4 md:mb-24"
     >
-      <img
-        class="rounded-full border-2 border-white p-1 md:mr-16 w-64 h-64"
-        src="me.png"
-        alt="Martin"
-      />
+      <div class="flex flex-col items-center md:mr-16 w-1/3">
+        <img
+          class="rounded-full border-2 border-white p-1"
+          src="me.png"
+          alt="Martin"
+        />
+
+        <p class="mt-4 text-xl">Martin Krajčovič</p>
+      </div>
 
       <div class="p-8 md:p-0 text-lg tracking-wide">
         <p>
