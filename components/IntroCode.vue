@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col container mx-auto my-32 bg-nn-primary font-code text-lg text-gray-400 rounded-md"
+    class="flex flex-col container mx-auto mt-64 mb-32 bg-nn-primary font-code text-lg text-gray-400 rounded-md"
   >
     <div class="flex p-4">
       <div class="w-4 h-4 bg-red-500 rounded-full"></div>
@@ -26,8 +26,8 @@
 
       <p class="mt-8">
         <span class="text-pink-700">func</span>
-        <span class="text-blue-300">about</span>(<span class="text-blue-300">
-          people ...misc.Human </span
+        <span class="text-blue-300">about</span>(<span class="text-blue-300"
+          >people ...misc.Human</span
         >) *<span class="text-blue-300">misc.Info</span> {
       </p>
       <p class="pl-8">
@@ -43,7 +43,8 @@
         location: "<span class="text-orange-400">Bratislava, Slovakia</span>",
       </p>
       <p class="pl-16">
-        age: 28 * <span class="text-orange-400">time.Year</span>,
+        age: {{ ageFromBirthday('07 Aug 1992 00:00:00 GMT+1') }} *
+        <span class="text-orange-400">time.Year</span>,
       </p>
       <p class="pl-16">skills: misc.Skills{</p>
       <p class="pl-24"><span class="text-orange-400">backend.Go</span>,</p>
@@ -83,3 +84,17 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    ageFromBirthday(birthday) {
+      birthday = Date.parse(birthday)
+
+      const ageDiffMs = Date.now() - birthday
+      const ageDate = new Date(ageDiffMs)
+      return Math.abs(ageDate.getUTCFullYear() - 1970)
+    }
+  }
+}
+</script>
