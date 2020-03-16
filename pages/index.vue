@@ -41,6 +41,12 @@ export default {
     TimelineList,
     ProjectList,
     Footer
+  },
+
+  head() {
+    return {
+      title: 'Numlinet'
+    }
   }
 }
 </script>
