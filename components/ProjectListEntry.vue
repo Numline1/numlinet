@@ -1,18 +1,23 @@
 <template>
-  <div class="flex w-full mb-16">
-    <div class="pt-2 px-4 w-16">
-      <img :src="project.projectLogo" :alt="project.name" />
-    </div>
-
-    <div class="w-1/2">
+  <div class="flex w-full mb-16 pb-16 border-b">
+    <div class="mr-4 w-1/2">
       <p class="px-4 text-2xl">{{ project.name }}</p>
 
       <!-- eslint-disable-next-line -->
       <div class="mt-4 px-4 text-justify" v-html="project.description"></div>
+
+      <div v-if="project.link" class="mt-4 px-4">
+        <a
+          class="font-bold text-blue-500"
+          :href="project.link"
+          target="_blank"
+          >{{ friendlyLink(project.link) }}</a
+        >
+      </div>
     </div>
 
-    <div class="self-center w-1/2">
-      <img :src="project.projectImage" :alt="project.name" />
+    <div class="rounded self-center w-1/2" :class="`bg-${project.color}`">
+      <img class="pl-2 pt-2" :src="project.image" :alt="project.name" />
     </div>
   </div>
 </template>
@@ -23,6 +28,16 @@ export default {
     project: {
       type: Object,
       required: true
+    }
+  },
+  methods: {
+    friendlyLink(parameter) {
+      let friendlyLink
+
+      friendlyLink = parameter.replace('https://', '')
+      friendlyLink = friendlyLink.replace('http://', '')
+
+      return friendlyLink
     }
   }
 }
