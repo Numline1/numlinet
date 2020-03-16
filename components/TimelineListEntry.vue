@@ -5,11 +5,17 @@
       :class="[timelineItem.bar.height, timelineItem.bar.color]"
     ></div>
 
-    <p class="cursor-pointer my-4 border-b border-dashed">
+    <p
+      :class="{
+        'cursor-pointer md:border-b md:border-dashed': timelineItem.description
+      }"
+      class="m-4 text-center"
+    >
       <strong>{{ timelineItem.position }}</strong>
       <span v-if="timelineItem.company">@ {{ timelineItem.company }}</span>
 
-      <span v-if="activeId === timelineItem.id">&#9662;</span>
+      <span v-if="timelineItem.description === null"></span>
+      <span v-else-if="activeId === timelineItem.id">&#9662;</span>
       <span v-else>&#9656;</span>
     </p>
     <p v-if="activeId === timelineItem.id" class="mb-4 text-gray-500">

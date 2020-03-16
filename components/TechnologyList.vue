@@ -4,7 +4,9 @@
       Tech stack
     </p>
 
-    <div class="container mx-auto flex flex-wrap items-center mt-12 mb-4">
+    <div
+      class="container mx-auto flex flex-wrap justify-center items-center mt-12 mb-4"
+    >
       <technology-list-entry
         v-for="technology in technologies"
         :key="technology.id"

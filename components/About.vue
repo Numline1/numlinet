@@ -1,17 +1,19 @@
 <template>
-  <div class="bg-nn-primary mt-12 py-12 text-gray-400">
+  <div class="bg-nn-primary md:mt-12 py-12 text-gray-400">
     <p class="mt-4 text-3xl text-center">
       About
     </p>
 
-    <div class="container mx-auto flex items-center mt-12 mb-24">
+    <div
+      class="container mx-auto flex flex-col md:flex-row items-center mt-12 mb-4 md:mb-24"
+    >
       <img
-        class="rounded-full border-2 border-white p-1 mr-16 w-64 h-64"
+        class="rounded-full border-2 border-white p-1 md:mr-16 w-64 h-64"
         src="me.png"
         alt="Martin"
       />
 
-      <div class="text-lg tracking-wide">
+      <div class="p-8 md:p-0 text-lg tracking-wide">
         <p>
           I've been designing and developing apps for over 10 years, using a
           broad range of languages, tools, operating systems and cloud-based

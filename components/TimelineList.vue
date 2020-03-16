@@ -80,7 +80,7 @@ export default {
       {
         id: 6,
         position: 'Now',
-        description: 'Lorem ipsum dolor sit amet.',
+        description: null,
         company: null,
         bar: {
           height: 'h-16',
