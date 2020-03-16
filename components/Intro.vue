@@ -1,7 +1,7 @@
 <template>
   <div class="mt-24">
     <div class="flex flex-col items-center">
-      <p class="w-2/3 leading-tight text-6xl font-bold text-center">
+      <p class="w-2/5 leading-tight text-6xl font-bold text-center">
         Your very own backend software engineer
       </p>
 
@@ -10,7 +10,17 @@
         software
       </p>
 
-      <img src="/intro_code.png" alt="Intro code" />
+      <IntroCode></IntroCode>
     </div>
   </div>
 </template>
+
+<script>
+import IntroCode from '@/components/IntroCode'
+
+export default {
+  components: {
+    IntroCode
+  }
+}
+</script>

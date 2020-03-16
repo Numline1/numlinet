@@ -14,7 +14,8 @@ module.exports = {
       }
     },
     fontFamily: {
-      sans: ['Lato', 'sans-serif']
+      sans: ['Lato', 'sans-serif'],
+      code: ['Source Code Pro', 'monospace']
     }
   },
   variants: {},
