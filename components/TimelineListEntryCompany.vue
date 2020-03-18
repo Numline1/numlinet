@@ -2,10 +2,10 @@
   <div
     :class="[
       isEven
-        ? 'pl-8 border-l items-start -ml-1'
-        : 'pr-8 border-r items-end -mr-1'
+        ? 'pl-10 border-l items-start -ml-1'
+        : 'pr-10 border-r items-end -mr-1'
     ]"
-    class="relative flex flex-col w-1/2 p-4 border-black border-dashed"
+    class="relative flex flex-col w-1/2 p-8 border-black border-dashed"
   >
     <div
       :class="[isEven ? 'timeline-dot-left' : 'timeline-dot-right']"
@@ -21,7 +21,6 @@
         v-for="hashtag in timelineEntry.hashtags"
         :key="hashtag"
         :class="[isEven ? 'mr-2' : 'ml-2']"
-        class="ml-2"
       >
         #<span class="text-gray-600">{{ hashtag }}</span>
       </p>
