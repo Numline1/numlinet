@@ -14,12 +14,11 @@
           I always seek quality output and customer satisfaction.
         </p>
 
-        <button
-          class="w-48 mt-8 px-8 py-2 bg-primary-gray text-gray-100"
-          href="#contact"
-        >
-          Contact me
-        </button>
+        <a class="mt-8" href="#contact">
+          <button class="w-48 px-8 py-2 bg-primary-gray text-gray-100">
+            Contact me
+          </button>
+        </a>
       </div>
 
       <div class="w-1/4 ml-16">

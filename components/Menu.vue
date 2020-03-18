@@ -1,5 +1,5 @@
 <template>
   <ul class="flex">
-    <li><a href="mailto:me@numli.net">Contact</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
 </template>
