@@ -7,7 +7,7 @@
         <p>
           Experienced backend software engineer with over 10 years in the field.
           Skilled in a broad range of languages, tools, operating systems and
-          cloud-based solutions.
+          cloud-based platforms.
         </p>
 
         <p class="mt-8">
