@@ -1,39 +1,53 @@
 <template>
-  <div class="flex flex-col items-center">
-    <div
-      class="w-2"
-      :class="[timelineItem.bar.height, timelineItem.bar.color]"
-    ></div>
+  <div>
+    <div v-if="isEven" class="flex w-full">
+      <timeline-list-entry-quote
+        v-if="timelineEntry.id % 2 === 0"
+        :timeline-entry="timelineEntry"
+        :is-even="isEven"
+      ></timeline-list-entry-quote>
+      <timeline-list-entry-company
+        v-if="timelineEntry.id % 2 === 0"
+        :timeline-entry="timelineEntry"
+        :is-even="isEven"
+      ></timeline-list-entry-company>
+    </div>
 
-    <p
-      :class="{
-        'cursor-pointer md:border-b md:border-dashed': timelineItem.description
-      }"
-      class="m-4 text-center"
-    >
-      <strong>{{ timelineItem.position }}</strong>
-      <span v-if="timelineItem.company">@ {{ timelineItem.company }}</span>
-
-      <span v-if="timelineItem.description === null"></span>
-      <span v-else-if="activeId === timelineItem.id">&#9662;</span>
-      <span v-else>&#9656;</span>
-    </p>
-    <p v-if="activeId === timelineItem.id" class="mb-4 text-gray-500">
-      {{ timelineItem.description }}
-    </p>
+    <div v-if="!isEven" class="flex w-full">
+      <timeline-list-entry-company
+        v-if="timelineEntry.id % 2 !== 0"
+        :timeline-entry="timelineEntry"
+        :is-even="isEven"
+      ></timeline-list-entry-company>
+      <timeline-list-entry-quote
+        v-if="timelineEntry.id % 2 !== 0"
+        :timeline-entry="timelineEntry"
+        :is-even="isEven"
+      ></timeline-list-entry-quote>
+    </div>
   </div>
 </template>
 
 <script>
+import TimelineListEntryCompany from '@/components/TimelineListEntryCompany'
+import TimelineListEntryQuote from '@/components/TimelineListEntryQuote'
+
 export default {
+  components: {
+    TimelineListEntryCompany,
+    TimelineListEntryQuote
+  },
+
   props: {
-    timelineItem: {
+    timelineEntry: {
       type: Object,
       required: true
-    },
-    activeId: {
-      type: Number,
-      default: 0
+    }
+  },
+
+  computed: {
+    isEven() {
+      return this.timelineEntry.id % 2 === 0
     }
   }
 }

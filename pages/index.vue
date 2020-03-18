@@ -9,14 +9,8 @@
     <!-- About -->
     <About></About>
 
-    <!-- Tech stack -->
-    <TechnologyList></TechnologyList>
-
-    <!-- The road so far -->
+    <!-- Career -->
     <TimelineList></TimelineList>
-
-    <!-- My work -->
-    <ProjectList></ProjectList>
 
     <!-- Footer -->
     <Footer></Footer>
@@ -27,9 +21,7 @@
 import Header from '@/components/Header'
 import Intro from '@/components/Intro'
 import About from '@/components/About'
-import TechnologyList from '@/components/TechnologyList'
 import TimelineList from '@/components/TimelineList'
-import ProjectList from '@/components/ProjectList'
 import Footer from '@/components/Footer'
 
 export default {
@@ -37,9 +29,7 @@ export default {
     Header,
     Intro,
     About,
-    TechnologyList,
     TimelineList,
-    ProjectList,
     Footer
   },
 
