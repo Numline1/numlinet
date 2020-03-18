@@ -1,6 +1,6 @@
 <template>
   <div
-    class="container mx-auto px-4 flex justify-between items-end mt-6 mx-8 pb-6 border-b uppercase"
+    class="container mx-auto px-4 flex justify-between items-center mt-6 mx-8 pb-6 border-b uppercase"
   >
     <!-- Logo -->
     <Logo></Logo>
