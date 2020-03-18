@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-48 py-32 bg-gray-100">
+  <div data-aos="fade" class="mt-48 py-32 bg-gray-100">
     <div
       class="container mx-auto flex justify-center items-center p-8 text-lg text-gray-700"
     >

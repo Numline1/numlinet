@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-32">
+  <div data-aos="fade-up" class="mt-32">
     <div class="flex flex-col items-center">
       <p class="leading-tight px-8 text-6xl font-bold text-center">
         Senior backend
