@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col container mx-auto mt-32 bg-primary-gray font-code text-lg text-gray-400 rounded-md"
+    class="flex flex-col container mx-auto mt-32 pb-8 bg-primary-gray font-code text-lg text-gray-400 rounded-md"
   >
     <div class="flex p-4">
       <div class="w-4 h-4 bg-red-500 rounded-full"></div>
@@ -8,7 +8,7 @@
       <div class="w-4 h-4 ml-2 bg-green-500 rounded-full"></div>
     </div>
 
-    <div class="p-4">
+    <div class="p-4 pl-8">
       <p>
         <span class="text-pink-700">package</span>
         <span class="text-blue-300">engineer</span>
@@ -48,6 +48,32 @@
       <p class="pl-16">
         testedCode: <span class="text-orange-400">true</span>,
       </p>
+      <p class="pl-16">techStack: <span class="text-orange-400">{</span></p>
+      <p class="pl-24"><span class="text-orange-400">backend.Go</span>,</p>
+      <p class="pl-24"><span class="text-orange-400">backend.gRPC</span>,</p>
+      <p class="pl-24"><span class="text-orange-400">backend.GORM</span>,</p>
+      <p class="pl-24"><span class="text-orange-400">backend.Gin</span>,</p>
+      <p class="pl-24"><span class="text-orange-400">backend.NodeJS</span>,</p>
+      <p class="pl-24"><span class="text-orange-400">backend.Laravel</span>,</p>
+      <p class="pl-24"><span class="text-orange-400">backend.MariaDB</span>,</p>
+      <p class="pl-24">
+        <span class="text-orange-400">backend.PostgreSQL</span>,
+      </p>
+      <p class="pl-24"><span class="text-orange-400">backend.MongoDB</span>,</p>
+      <p class="pl-24"><span class="text-orange-400">frontend.NuxtJS</span>,</p>
+      <p class="pl-24">
+        <span class="text-orange-400">devops.Kubernetes</span>,
+      </p>
+      <p class="pl-24">
+        <span class="text-orange-400">devops.GoogleCloudPlatform</span>,
+      </p>
+      <p class="pl-24">
+        <span class="text-orange-400">devops.AmazonWebServices</span>,
+      </p>
+      <p class="pl-24"><span class="text-orange-400">devops.CI/CD</span>,</p>
+      <p class="pl-24"><span class="text-orange-400">devops.Git</span>,</p>
+
+      <p class="pl-16">}</p>
       <p class="pl-16">
         contact:
         <a
