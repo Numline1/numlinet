@@ -1,34 +1,33 @@
 <template>
-  <div class="bg-nn-primary md:mt-12 py-12 text-gray-400">
+  <div class="mt-48 py-32 bg-gray-100">
     <div
-      class="container mx-auto flex flex-col md:flex-row items-center mt-16 mb-4 md:mb-24"
+      class="container mx-auto flex justify-center items-center p-8 text-lg text-gray-700"
     >
-      <div class="flex flex-col items-center md:mr-16 w-1/3">
-        <img
-          class="rounded-full border-2 border-white p-1"
-          src="me.png"
-          alt="Martin"
-        />
-
-        <p class="mt-4 text-xl text-center">Martin Krajčovič</p>
-      </div>
-
-      <div class="p-8 md:p-0 text-lg tracking-wide text-center">
+      <div class="flex flex-col items-end w-1/2 mr-16 text-xl text-right">
         <p>
-          I've been designing and developing apps for over 10 years, using a
-          broad range of languages, tools, operating systems and cloud-based
-          solutions. I always seek quality output and customer satisfaction.
+          Experienced backend software engineer with over 10 years in the field.
+          Skilled in a broad range of languages, tools, operating systems and
+          cloud-based solutions.
         </p>
 
         <p class="mt-8">
-          I'm always looking for new opportunities and projects, feel free to
-          <a
-            class="border-b border-dashed border-gray-900"
-            href="mailto:me@numli.net"
-            >drop me an e-mail</a
-          >
-          and I'll get back to you.
+          I always seek quality output and customer satisfaction.
         </p>
+
+        <button
+          class="w-48 mt-8 px-8 py-2 bg-primary-gray text-gray-100"
+          href="#contact"
+        >
+          Contact me
+        </button>
+      </div>
+
+      <div class="w-1/4 ml-16">
+        <img
+          class="p-1 rounded-full bg-primary-gray"
+          src="me.png"
+          alt="Martin"
+        />
       </div>
     </div>
   </div>
