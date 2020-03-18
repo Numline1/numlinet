@@ -17,7 +17,12 @@
       :class="[isEven ? 'justify-start' : 'justify-end']"
       class="flex flex-wrap mt-6 w-2/5"
     >
-      <p v-for="hashtag in timelineEntry.hashtags" :key="hashtag" class="ml-2">
+      <p
+        v-for="hashtag in timelineEntry.hashtags"
+        :key="hashtag"
+        :class="[isEven ? 'mr-2' : 'ml-2']"
+        class="ml-2"
+      >
         #<span class="text-gray-600">{{ hashtag }}</span>
       </p>
     </div>
