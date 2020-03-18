@@ -1,5 +1,5 @@
 <template>
-  <div :class="[isEven ? 'justify-end' : 'justify-start']" class="flex  w-1/2">
+  <div :class="[isEven ? 'justify-end' : 'justify-start']" class="flex w-1/2">
     <div
       :class="[isEven ? 'pr-8 text-right' : 'pl-8 text-left']"
       class="w-2/3 p-4"
