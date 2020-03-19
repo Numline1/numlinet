@@ -13,10 +13,16 @@
           {{ quote.text }}
         </p>
         <div>
-          <div class="flex">
-            <img :src="quote.reference.icon" :alt="timelineEntry.name" />
-            <p class="mt-4 font-bold">{{ quote.reference.title }}</p>
-          </div>
+          <a :href="quote.reference.url" target="_blank">
+            <div class="flex items-center mt-4">
+              <img
+                class="h-4 w-4 mr-1"
+                :src="quote.reference.icon"
+                :alt="timelineEntry.name"
+              />
+              <p class="font-bold">{{ quote.reference.title }}</p>
+            </div>
+          </a>
           <p>{{ quote.reference.subtitle }}</p>
         </div>
       </div>

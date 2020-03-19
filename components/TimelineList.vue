@@ -41,10 +41,10 @@ export default {
             id: 1,
             text: 'Lorem ipsum dolor sit amet',
             reference: {
-              icon: '',
+              icon: '/icons/linkedin.svg',
               title: 'Rudolf Halás',
               subtitle: 'CTO at Donner Consulting Group',
-              url: 'https://halas.codes'
+              url: 'https://www.linkedin.com/in/rudolf-halas/'
             }
           },
           {
@@ -52,7 +52,7 @@ export default {
             text:
               'Ultimate football sponsorship platform based on Laravel, GraphQL and hosted at Google Cloud.',
             reference: {
-              icon: '',
+              icon: '/icons/sponsoronline.png',
               title: 'sponsor.online',
               subtitle: null,
               url: 'https://sponsor.online'
@@ -63,7 +63,7 @@ export default {
             text:
               'Set of microservices written in Go to gather, analyse and process data from social media, including ML, image/video and text recognition.',
             reference: {
-              icon: '',
+              icon: '/icons/go.svg',
               title: 'Socializr',
               subtitle: null,
               url: null
@@ -82,7 +82,7 @@ export default {
             text:
               'Portal for lovers of good food and restaurants with more than 8000 restaurants across Czechia and Slovakia. Based on Laravel, JSON API with ability to pull daily menus, manage or review restaurants.',
             reference: {
-              icon: '',
+              icon: '/icons/donappetit.ico',
               title: 'donappetit.sk',
               subtitle: null,
               url: 'https://donappetit.sk'
@@ -93,7 +93,7 @@ export default {
             text:
               'Complete online travel solution, allowing users to book, manage and enjoy their vacation, with more than 400 satisfied customers. Built using Laravel and NodeJS, communicating with several 3rd party booking APIs.',
             reference: {
-              icon: '',
+              icon: '/icons/dannygo.jpg',
               title: 'dannygo.eu',
               subtitle: null,
               url: 'https://www.dannygo.eu'
@@ -112,7 +112,7 @@ export default {
             text:
               'Improving processes and technology used in large-scale asset management by designing new tools and migrating from obsolete databases to new solutions.',
             reference: {
-              icon: '',
+              icon: '/icons/hpe.ico',
               title: 'hpe.com',
               subtitle: null,
               url: 'https://www.hpe.com'
@@ -131,7 +131,7 @@ export default {
             text:
               'Maintenance of customer servers during day-to-day operations, including incident and change management.',
             reference: {
-              icon: '',
+              icon: '/icons/adecco.png',
               title: 'adecco.sk',
               subtitle: null,
               url: 'https://adecco.sk'
