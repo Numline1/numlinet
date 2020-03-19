@@ -1,9 +1,5 @@
 <template>
-  <div
-    data-aos="zoom-in"
-    :class="[isEven ? 'justify-end' : 'justify-start']"
-    class="flex w-1/2"
-  >
+  <div :class="[isEven ? 'justify-end' : 'justify-start']" class="flex w-1/2">
     <div
       :class="[isEven ? 'pr-10 text-right' : 'pl-10 text-left']"
       class="w-2/3 p-8"
