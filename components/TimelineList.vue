@@ -39,7 +39,8 @@ export default {
         quotes: [
           {
             id: 1,
-            text: 'Lorem ipsum dolor sit amet',
+            text:
+              "Martin is a skilled back-end engineer with an eye for tackling edge cases. He proactively embraces new technologies to deliver scalable solutions which don't break easily.",
             reference: {
               icon: '/icons/linkedin.svg',
               title: 'Rudolf Halás',
