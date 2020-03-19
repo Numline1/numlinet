@@ -7,6 +7,7 @@
         <form class="flex flex-col" target="_self" @submit.prevent="contact">
           <label for="email">E-mail</label>
           <input
+            id="email"
             v-model="email"
             class="appearance-none block w-full bg-gray-200 text-gray-700
           border rounded py-3 px-4 leading-tight
@@ -17,6 +18,7 @@
           />
           <label class="mt-4" for="message">Message</label>
           <textarea
+            id="message"
             v-model="message"
             class="appearance-none block w-full h-48 bg-gray-200 text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
             name="message"
