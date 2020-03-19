@@ -24,8 +24,16 @@
       <div class="w-1/4 ml-16">
         <img
           class="p-1 rounded-full bg-primary-gray"
-          src="me.png"
-          alt="Martin"
+          sizes="(max-width: 768px) 100vw, 768px"
+          srcset="
+            /me_yws9sx_c_scale.w_190.jpg 190w,
+            /me_yws9sx_c_scale.w_405.jpg 405w,
+            /me_yws9sx_c_scale.w_583.jpg 583w,
+            /me_yws9sx_c_scale.w_723.jpg 723w,
+            /me_yws9sx_c_scale.w_768.jpg 768w
+          "
+          src="/me_yws9sx_c_scale.w_768.jpg"
+          alt="Me"
         />
       </div>
     </div>
