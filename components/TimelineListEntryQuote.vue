@@ -18,7 +18,7 @@
               <img
                 class="h-4 w-4 mr-1"
                 :src="quote.reference.icon"
-                :alt="timelineEntry.name"
+                :alt="quote.reference.title"
               />
               <p class="font-bold">{{ quote.reference.title }}</p>
             </div>
