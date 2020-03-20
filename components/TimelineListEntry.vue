@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="isEven" class="flex w-full">
+    <div v-if="isEven" class="flex flex-col-reverse md:flex-row w-full">
       <timeline-list-entry-quote
         v-if="timelineEntry.id % 2 === 0"
         :timeline-entry="timelineEntry"
@@ -13,7 +13,7 @@
       ></timeline-list-entry-company>
     </div>
 
-    <div v-if="!isEven" class="flex w-full">
+    <div v-if="!isEven" class="flex flex-col md:flex-row w-full">
       <timeline-list-entry-company
         v-if="timelineEntry.id % 2 !== 0"
         :timeline-entry="timelineEntry"

@@ -1,9 +1,9 @@
 <template>
-  <div id="contact" class="mt-48 py-32 bg-gray-100">
+  <div id="contact" class="mt-12 md:mt-48 py-8 md:py-32 bg-gray-100">
     <div
-      class="container mx-auto flex justify-center items-center p-8 text-lg text-gray-700"
+      class="container mx-auto flex flex-col-reverse md:flex-row justify-center items-center p-8 text-lg text-gray-700"
     >
-      <div class="w-1/2">
+      <div class="w-full md:w-1/2 mt-8 md:mt-0">
         <form class="flex flex-col" target="_self" @submit.prevent="contact">
           <label for="email">E-mail</label>
           <input
@@ -24,7 +24,9 @@
             name="message"
             placeholder="Your message goes here..."
           ></textarea>
-          <div class="flex items-center justify-between mt-4">
+          <div
+            class="flex flex-col md:flex-row items-center justify-between mt-4"
+          >
             <button
               v-if="!submitted"
               class="w-48 px-8 mr-2 py-2 bg-primary-gray text-gray-100"
@@ -36,13 +38,16 @@
             <p v-if="submitted" class="w-full text-sm text-green-600">
               Thank you for your message :)
             </p>
-            <p v-if="error.length !== 0" class="w-1/2 text-sm text-red-500">
+            <p
+              v-if="error.length !== 0"
+              class="md:w-1/2 mt-4 md:mt-0 text-sm text-red-500"
+            >
               {{ error }}
             </p>
           </div>
         </form>
       </div>
-      <div class="w-1/2 pl-24">
+      <div class="md:w-1/2 md:pl-24">
         <p class="text-4xl">Contact</p>
         <p class="text-gray-500">Let's get in touch</p>
       </div>
@@ -79,6 +84,7 @@ export default {
         })
         .then(function(response) {
           this.submitted = true
+          this.error = ''
         })
         .catch(function(response) {
           this.submitted = false

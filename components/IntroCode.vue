@@ -64,12 +64,8 @@
       <p class="pl-24">
         <span class="text-orange-400">devops.Kubernetes</span>,
       </p>
-      <p class="pl-24">
-        <span class="text-orange-400">devops.GoogleCloudPlatform</span>,
-      </p>
-      <p class="pl-24">
-        <span class="text-orange-400">devops.AmazonWebServices</span>,
-      </p>
+      <p class="pl-24"><span class="text-orange-400">devops.GCP</span>,</p>
+      <p class="pl-24"><span class="text-orange-400">devops.AWS</span>,</p>
       <p class="pl-24"><span class="text-orange-400">devops.CI/CD</span>,</p>
       <p class="pl-24"><span class="text-orange-400">devops.Git</span>,</p>
 

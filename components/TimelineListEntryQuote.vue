@@ -1,8 +1,13 @@
 <template>
-  <div :class="[isEven ? 'justify-end' : 'justify-start']" class="flex w-1/2">
+  <div
+    :class="[isEven ? 'md:justify-end' : 'md:justify-start']"
+    class="flex md:w-1/2"
+  >
     <div
-      :class="[isEven ? 'pr-10 text-right' : 'pl-10 text-left']"
-      class="w-2/3 p-8"
+      :class="[
+        isEven ? 'px-4 md:pr-10 md:text-right' : 'px-4 md:pl-10 md:text-left'
+      ]"
+      class="md:w-2/3 md:p-8"
     >
       <div
         v-for="quote in timelineEntry.quotes"

@@ -2,25 +2,25 @@
   <div
     :class="[
       isEven
-        ? 'pl-10 border-l items-start -ml-1'
-        : 'pr-10 border-r items-end -mr-1'
+        ? 'md:pl-10 md:border-l md:items-start -ml-1'
+        : 'md:pr-10 md:border-r md:items-end -mr-1'
     ]"
-    class="relative flex flex-col w-1/2 p-8 border-black border-dashed"
+    class="relative flex flex-col md:w-1/2 p-4 md:p-8 border-black border-dashed"
   >
     <div
       :class="[isEven ? 'timeline-dot-left' : 'timeline-dot-right']"
-      class="h-4 w-4 bg-black rounded"
+      class="h-4 w-4 bg-black rounded hidden md:block"
     ></div>
     <p class="font-bold text-2xl">{{ timelineEntry.company }}</p>
     <p class="text-lg text-gray-500">{{ timelineEntry.position }}</p>
     <div
-      :class="[isEven ? 'justify-start' : 'justify-end']"
-      class="flex flex-wrap mt-6 w-2/5"
+      :class="[isEven ? 'md:justify-start' : 'md:justify-end']"
+      class="flex flex-wrap mt-2 md:mt-6 w-2/5"
     >
       <p
         v-for="hashtag in timelineEntry.hashtags"
         :key="hashtag"
-        :class="[isEven ? 'mr-2' : 'ml-2']"
+        :class="[isEven ? 'mr-2 md:mr-2' : 'mr-2 md:ml-2']"
       >
         #<span class="text-gray-600">{{ hashtag }}</span>
       </p>
