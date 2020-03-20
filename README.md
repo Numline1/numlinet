@@ -1,6 +1,6 @@
-# numlinet
+# Numlinet
 
-> My splendiferous Nuxt.js project
+> My personal website at [Numli.net](https://numli.net)
 
 ## Build Setup
 
