@@ -1,6 +1,6 @@
 <template>
-  <div class="mt-16 text-gray-700">
-    <p class="text-3xl text-center">
+  <div class="flex flex-col items-center mt-16 text-gray-700">
+    <p class="text-3xl">
       Career
     </p>
 
@@ -11,6 +11,12 @@
         :timeline-entry="timelineEntry"
       ></timeline-list-entry>
     </div>
+
+    <a class="mt-8" href="/resume.pdf">
+      <button class="w-64 px-4 py-2 bg-primary-gray text-gray-100">
+        Download a more detailed resume (PDF)
+      </button>
+    </a>
   </div>
 </template>
 
