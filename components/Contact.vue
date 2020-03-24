@@ -78,7 +78,7 @@ export default {
       this.submitting = true
 
       this.$axios
-        .$post('https://submit-form.com/P2S73gqlcN51WwihFSIR', {
+        .$post('https://submit-form.com/P2S73gqlcN51WwihFSIR_', {
           email: this.email,
           message: this.message
         })
