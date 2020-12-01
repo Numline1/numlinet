@@ -9,15 +9,15 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          gray: '#1e1e1e'
-        }
-      }
+          gray: '#1e1e1e',
+        },
+      },
     },
     fontFamily: {
       sans: ['Lato', 'sans-serif'],
-      code: ['Source Code Pro', 'monospace']
-    }
+      code: ['Source Code Pro', 'monospace'],
+    },
   },
   variants: {},
-  plugins: []
+  plugins: [],
 }
