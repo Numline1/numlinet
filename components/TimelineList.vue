@@ -1,10 +1,8 @@
 <template>
   <div class="flex flex-col items-center mt-16 text-gray-700">
-    <p class="text-3xl">
-      Career
-    </p>
+    <p class="text-3xl">Career</p>
 
-    <div class="container mx-auto flex flex-col mt-16">
+    <div class="container flex flex-col mx-auto mt-16">
       <timeline-list-entry
         v-for="timelineEntry in timelineEntries"
         :key="timelineEntry.id"
@@ -13,7 +11,7 @@
     </div>
 
     <a class="mt-8" href="/resume.pdf">
-      <button class="w-64 px-4 py-2 bg-primary-gray text-gray-100">
+      <button class="w-64 px-4 py-2 text-gray-100 bg-primary-gray">
         Download a more detailed resume (PDF)
       </button>
     </a>
@@ -25,7 +23,7 @@ import TimelineListEntry from '@/components/TimelineListEntry'
 
 export default {
   components: {
-    TimelineListEntry
+    TimelineListEntry,
   },
 
   data: () => ({
@@ -40,7 +38,7 @@ export default {
           'grpc',
           'laravel',
           'graphql',
-          'devops'
+          'devops',
         ],
         quotes: [
           {
@@ -51,8 +49,8 @@ export default {
               icon: '/icons/linkedin.svg',
               title: 'Rudolf Halás',
               subtitle: 'CTO at Donner Consulting Group',
-              url: 'https://www.linkedin.com/in/rudolf-halas/'
-            }
+              url: 'https://www.linkedin.com/in/rudolf-halas/',
+            },
           },
           {
             id: 2,
@@ -62,8 +60,8 @@ export default {
               icon: '/icons/sponsoronline.png',
               title: 'sponsor.online',
               subtitle: null,
-              url: 'https://sponsor.online'
-            }
+              url: 'https://sponsor.online',
+            },
           },
           {
             id: 3,
@@ -73,10 +71,10 @@ export default {
               icon: '/icons/go.svg',
               title: 'Socializr',
               subtitle: null,
-              url: null
-            }
-          }
-        ]
+              url: null,
+            },
+          },
+        ],
       },
       {
         id: 2,
@@ -92,8 +90,8 @@ export default {
               icon: '/icons/donappetit.ico',
               title: 'donappetit.sk',
               subtitle: null,
-              url: 'https://donappetit.sk'
-            }
+              url: 'https://donappetit.sk',
+            },
           },
           {
             id: 2,
@@ -103,10 +101,10 @@ export default {
               icon: '/icons/dannygo.jpg',
               title: 'dannygo.eu',
               subtitle: null,
-              url: 'https://www.dannygo.eu'
-            }
-          }
-        ]
+              url: 'https://www.dannygo.eu',
+            },
+          },
+        ],
       },
       {
         id: 3,
@@ -122,10 +120,10 @@ export default {
               icon: '/icons/hpe.ico',
               title: 'hpe.com',
               subtitle: null,
-              url: 'https://www.hpe.com'
-            }
-          }
-        ]
+              url: 'https://www.hpe.com',
+            },
+          },
+        ],
       },
       {
         id: 4,
@@ -141,12 +139,12 @@ export default {
               icon: '/icons/adecco.png',
               title: 'adecco.sk',
               subtitle: null,
-              url: 'https://adecco.sk'
-            }
-          }
-        ]
-      }
-    ]
-  })
+              url: 'https://adecco.sk',
+            },
+          },
+        ],
+      },
+    ],
+  }),
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col container mx-auto mt-32 pb-8 bg-primary-gray font-code text-lg text-gray-400 rounded-md"
+    class="container flex flex-col pb-8 mx-auto mt-32 text-lg text-gray-400 bg-primary-gray font-code rounded-md"
   >
     <div class="flex p-4">
       <div class="w-4 h-4 bg-red-500 rounded-full"></div>
@@ -93,7 +93,7 @@ export default {
       const ageDiffMs = Date.now() - birthday
       const ageDate = new Date(ageDiffMs)
       return Math.abs(ageDate.getUTCFullYear() - 1970)
-    }
-  }
+    },
+  },
 }
 </script>

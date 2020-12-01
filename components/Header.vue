@@ -1,6 +1,6 @@
 <template>
   <div
-    class="container mx-auto px-4 flex justify-between items-center mt-6 mx-8 pb-6 border-b uppercase"
+    class="container flex items-center justify-between px-4 pb-6 mx-auto mt-6 uppercase border-b"
   >
     <!-- Logo -->
     <Logo></Logo>
@@ -17,7 +17,7 @@ import Menu from '@/components/Menu'
 export default {
   components: {
     Logo,
-    Menu
-  }
+    Menu,
+  },
 }
 </script>

@@ -1,10 +1,10 @@
 <template>
-  <div class="mt-12 md:mt-48 py-8 md:py-32 bg-gray-100">
+  <div class="py-8 mt-12 bg-gray-100 md:mt-48 md:py-32">
     <div
-      class="container mx-auto flex flex-col-reverse md:flex-row justify-center items-center p-8 text-lg text-gray-700"
+      class="container flex flex-col-reverse items-center justify-center p-8 mx-auto text-lg text-gray-700 md:flex-row"
     >
       <div
-        class="flex flex-col items-center md:items-end md:w-1/2 mt-8 md:mt-0 md:mr-16 text-xl text-center md:text-right"
+        class="flex flex-col items-center mt-8 text-xl text-center md:items-end md:w-1/2 md:mt-0 md:mr-16 md:text-right"
       >
         <p>
           Experienced backend software engineer with over 10 years in the field.
@@ -17,7 +17,7 @@
         </p>
 
         <a class="mt-8" href="#contact">
-          <button class="w-48 px-8 py-2 bg-primary-gray text-gray-100">
+          <button class="w-48 px-8 py-2 text-gray-100 bg-primary-gray">
             Contact me
           </button>
         </a>

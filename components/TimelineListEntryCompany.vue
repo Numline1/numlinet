@@ -3,19 +3,19 @@
     :class="[
       isEven
         ? 'md:pl-10 md:border-l md:items-start -ml-1'
-        : 'md:pr-10 md:border-r md:items-end -mr-1'
+        : 'md:pr-10 md:border-r md:items-end -mr-1',
     ]"
-    class="relative flex flex-col md:w-1/2 p-4 md:p-8 border-black border-dashed"
+    class="relative flex flex-col p-4 border-black border-dashed md:w-1/2 md:p-8"
   >
     <div
       :class="[isEven ? 'timeline-dot-left' : 'timeline-dot-right']"
-      class="h-4 w-4 bg-black rounded hidden md:block"
+      class="hidden w-4 h-4 bg-black rounded md:block"
     ></div>
-    <p class="font-bold text-2xl">{{ timelineEntry.company }}</p>
+    <p class="text-2xl font-bold">{{ timelineEntry.company }}</p>
     <p class="text-lg text-gray-500">{{ timelineEntry.position }}</p>
     <div
       :class="[isEven ? 'md:justify-start' : 'md:justify-end']"
-      class="flex flex-wrap mt-2 md:mt-6 w-2/5"
+      class="flex flex-wrap w-2/5 mt-2 md:mt-6"
     >
       <p
         v-for="hashtag in timelineEntry.hashtags"
@@ -33,13 +33,13 @@ export default {
   props: {
     timelineEntry: {
       type: Object,
-      required: true
+      required: true,
     },
     isEven: {
       type: Boolean,
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 }
 </script>
 

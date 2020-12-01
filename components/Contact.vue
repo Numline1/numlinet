@@ -1,17 +1,15 @@
 <template>
-  <div id="contact" class="mt-12 md:mt-48 py-8 md:py-32 bg-gray-100">
+  <div id="contact" class="py-8 mt-12 bg-gray-100 md:mt-48 md:py-32">
     <div
-      class="container mx-auto flex flex-col-reverse md:flex-row justify-center items-center p-8 text-lg text-gray-700"
+      class="container flex flex-col-reverse items-center justify-center p-8 mx-auto text-lg text-gray-700 md:flex-row"
     >
-      <div class="w-full md:w-1/2 mt-8 md:mt-0">
+      <div class="w-full mt-8 md:w-1/2 md:mt-0">
         <form class="flex flex-col" target="_self" @submit.prevent="contact">
           <label for="email">E-mail</label>
           <input
             id="email"
             v-model="email"
-            class="appearance-none block w-full bg-gray-200 text-gray-700
-          border rounded py-3 px-4 leading-tight
-          focus:outline-none focus:bg-white"
+            class="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border rounded appearance-none focus:outline-none focus:bg-white"
             type="email"
             name="email"
             placeholder="your@email.com"
@@ -20,16 +18,16 @@
           <textarea
             id="message"
             v-model="message"
-            class="appearance-none block w-full h-48 bg-gray-200 text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
+            class="block w-full h-48 px-4 py-3 leading-tight text-gray-700 bg-gray-200 border rounded appearance-none focus:outline-none focus:bg-white"
             name="message"
             placeholder="Your message goes here..."
           ></textarea>
           <div
-            class="flex flex-col md:flex-row items-center justify-between mt-4"
+            class="flex flex-col items-center justify-between mt-4 md:flex-row"
           >
             <button
               v-if="!submitted"
-              class="w-48 px-8 mr-2 py-2 bg-primary-gray text-gray-100"
+              class="w-48 px-8 py-2 mr-2 text-gray-100 bg-primary-gray"
               :disabled="submitting"
               @click="contact"
             >
@@ -40,7 +38,7 @@
             </p>
             <p
               v-if="error.length !== 0"
-              class="md:w-1/2 mt-4 md:mt-0 text-sm text-red-500"
+              class="mt-4 text-sm text-red-500 md:w-1/2 md:mt-0"
             >
               {{ error }}
             </p>
@@ -63,7 +61,7 @@ export default {
       message: '',
       submitting: false,
       submitted: false,
-      error: ''
+      error: '',
     }
   },
 
@@ -80,19 +78,19 @@ export default {
       this.$axios
         .$post('https://submit-form.com/P2S73gqlcN51WwihFSIR_', {
           email: this.email,
-          message: this.message
+          message: this.message,
         })
-        .then(function(response) {
+        .then(function (response) {
           this.submitted = true
           this.error = ''
         })
-        .catch(function(response) {
+        .catch(function (response) {
           this.submitted = false
           this.error = response.error
         })
 
       this.submitted = true
-    }
-  }
+    },
+  },
 }
 </script>

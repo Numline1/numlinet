@@ -1,7 +1,7 @@
 <template>
-  <div class="mt-32">
+  <div class="mt-24">
     <div class="flex flex-col items-center">
-      <p class="leading-tight px-8 text-6xl font-bold text-center">
+      <p class="px-8 text-6xl font-bold leading-tight text-center">
         Senior backend
         <br />
         engineer
@@ -23,7 +23,7 @@ import IntroCode from '@/components/IntroCode'
 
 export default {
   components: {
-    IntroCode
-  }
+    IntroCode,
+  },
 }
 </script>
