@@ -46,6 +46,7 @@ export default {
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
+    'nuxt-ackee',
   ],
   /*
    ** Nuxt.js modules
@@ -60,9 +61,16 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
+  ackee: {
+    server: 'https://ackee.zeus.numli.net',
+    domainId: '52aada0a-db2d-439d-aea2-c7434e32b21c',
+    ignoreLocalhost: false,
+    detailed: true,
+  },
   /*
    ** Build configuration
    */
+
   build: {
     /*
      ** You can extend webpack config here

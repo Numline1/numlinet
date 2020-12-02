@@ -23,7 +23,8 @@
   "dependencies": {
     "@nuxt/content": "^1.11.1",
     "@nuxtjs/axios": "^5.9.5",
-    "nuxt": "^2.11.0"
+    "nuxt": "^2.11.0",
+    "nuxt-ackee": "^2.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
