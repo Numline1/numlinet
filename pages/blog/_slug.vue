@@ -39,6 +39,9 @@ export default {
       latestArticles,
     }
   },
+  head() {
+    return { title: this.article.title + ' | ' + process.env.npm_package_name }
+  },
   methods: {
     humanDate(date) {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }

@@ -53,5 +53,8 @@ export default {
       paginatedArticles,
     }
   },
+  head: {
+    title: 'Blog' + ' | ' + process.env.npm_package_name,
+  },
 }
 </script>
