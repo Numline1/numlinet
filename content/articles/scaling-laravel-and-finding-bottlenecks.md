@@ -26,7 +26,7 @@ As I've mentioned, our infrastructure is also covered by a Cloudflare proxy. We 
 
 Our dev team decided to double as a baby devops squad and we were looking to take couple of hours to figure this out. Spoiler alert - it took almost 4 days. We moved to our staging environment, which is the closest we have to our production. We obviously didn't want to debug with live users, although we've stopped pushing ads and traffic in the meantime and site load time stabilized back to 1-2 seconds.
 
-The first step was to look at the logs. We aggregate everything to Datadog and with simple math (3000 users divided by 3 servers equals 1000 users per server), we figured out that this was an issue on our servers, not Cloudflare or DigitalOcean loadbalancer. With Round-robin algorithm we were distributing the load and at these numbers, Cloudflare doesn't impose any relevant limits on connections and DigitalOcaen seems to be limited to 10000 (this is something we'll have to figure out in the future). There was also no sign of an attack of any sort.
+The first step was to look at the logs. We aggregate everything to Datadog and with simple math (3000 users divided by 3 servers equals 1000 users per server), we figured out that this was an issue on our servers, not Cloudflare or DigitalOcean loadbalancer. With Round-robin algorithm we were distributing the load and at these numbers, Cloudflare doesn't impose any relevant limits on connections and DigitalOcean seems to be limited to 10000 (this is something we'll have to figure out in the future). There was also no sign of an attack of any sort.
 
 Upon seeing the Nginx logs however, it was obvious that something funky was going on:
 
@@ -41,7 +41,7 @@ PHP FPM log, on the other hand, had nothing interesting inside, just regular not
 [28-Nov-2020 16:38:30] NOTICE: [pool www] child 6893 started
 ```
 
-At MegaVerse, we deploy our servers using Ansible. The first thought was to start with our custom webserver and php fpm config templates. It seemed like an FPM issue, we thought "the spawned children in our pool are just not enough". Errors listed above generally indicate the FPM service didn't respond to Nginx within 60 seconds, or whatever the amount used for fastcgi timeout is.
+At Megaverse, we deploy our servers using Ansible. The first thought was to start with our custom webserver and php fpm config templates. It seemed like an FPM issue, we thought "the spawned children in our pool are just not enough". Errors listed above generally indicate the FPM service didn't respond to Nginx within 60 seconds, or whatever the amount used for fastcgi timeout is.
 
 ## Stage 1: Denial (of service)
 
@@ -210,5 +210,5 @@ Configuration files mentioned in this article:
 * [/etc/php/7.4/fpm/pool.d/www.conf](/content/scaling-laravel-and-finding-bottlenecks/www.conf.txt)
 * [/etc/sysctl.conf](/content/scaling-laravel-and-finding-bottlenecks/sysctl.conf.txt)
 
-*Special thanks to MegaVerse and my colleagues for making this article possible and providing support and data. Also a special thanks to my IRC comrades for proofreading an early edition of this article and providing valuable feedback!*
+*Special thanks to Megaverse and my colleagues for making this article possible and providing support and data. Also a special thanks to my IRC comrades for proofreading an early edition of this article and providing valuable feedback!*
 *Title image used is by [Michal Jarmoluk](https://pixabay.com/users/jarmoluk-143740/) from [Pixabay](https://pixabay.com/). Thank you.*
