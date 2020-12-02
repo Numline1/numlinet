@@ -1,5 +1,5 @@
 <template>
-  <div class="container grid grid-cols-5 gap-24 mx-auto">
+  <div class="container px-4 mx-auto md:grid md:grid-cols-5 md:gap-24">
     <article class="col-span-3">
       <h1 class="mb-2 text-3xl">{{ article.title }}</h1>
 

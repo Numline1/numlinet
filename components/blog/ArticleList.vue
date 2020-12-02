@@ -6,9 +6,9 @@
       class="border border-gray-300 rounded-lg"
     >
       <nuxt-link :to="{ name: 'blog-slug', params: { slug: article.slug } }">
-        <div class="flex w-full">
+        <div class="flex flex-col w-full md:flex-row">
           <img
-            class="h-48 rounded-l-lg"
+            class="h-48 rounded-tl-lg rounded-tr-lg md:rounded-bl-lg md:rounded-tr-none"
             :src="article.imgSmall"
             :alt="article.title"
           />

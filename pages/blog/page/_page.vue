@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto">
+  <div class="container px-4 mx-auto">
     <h1 class="mb-8 text-3xl">Blog</h1>
     <article-list
       :articles="paginatedArticles"
