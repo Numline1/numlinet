@@ -1,0 +1,41 @@
+server {
+    listen *:80;
+
+    server_name oursite.tld;
+    root /home/oursite/www/current/public/;
+    index  index.html index.htm index.php;
+
+    client_max_body_size 32M;
+    port_in_redirect off;
+    merge_slashes on;
+
+    #Don't use slash at end
+    rewrite ^/(.*)/$ /$1 permanent;
+
+    # add rewrite rule here:
+    # block access to /index.(php|htm|html)
+    if ($request_uri ~ "/index.(php|html?)") {
+        rewrite ^ /$1 permanent;
+    }
+
+    try_files $uri $uri/ /index.php;
+
+    location / {
+        if (!-e $request_filename) {
+           rewrite ^.*$ /index.php last;
+        }
+    }
+
+    location /check_app {
+        auth_basic off;
+        allow all;
+    }
+
+    location ~ \.php$ {
+        include /etc/nginx/fastcgi_params;
+        fastcgi_pass phpfpm;
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_keep_conn on;
+    }
+}
