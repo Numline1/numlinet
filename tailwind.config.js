@@ -20,4 +20,11 @@ module.exports = {
   },
   variants: {},
   plugins: [],
+  purge: [
+    'components/**/*.vue',
+    'layouts/**/*.vue',
+    'pages/**/*.vue',
+    'plugins/**/*.js',
+    'nuxt.config.js',
+  ],
 }
