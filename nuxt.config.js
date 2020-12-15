@@ -1,7 +1,4 @@
 export default {
-  /*
-   ** Headers of the page
-   */
   head: {
     title: process.env.npm_package_name || '',
     meta: [
@@ -26,55 +23,18 @@ export default {
       },
     ],
   },
-  /*
-   ** Customize the progress-bar color
-   */
   loading: { color: '#fff' },
-  /*
-   ** Global CSS
-   */
   css: [],
-  /*
-   ** Plugins to load before mounting the App
-   */
   plugins: [],
-  /*
-   ** Nuxt.js dev-modules
-   */
-  buildModules: [
-    // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module',
-    // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-    '@nuxtjs/tailwindcss',
-    'nuxt-ackee',
-  ],
-  /*
-   ** Nuxt.js modules
-   */
-  modules: [
-    // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
-    '@nuxt/content',
-  ],
-  /*
-   ** Axios module configuration
-   ** See https://axios.nuxtjs.org/options
-   */
-  axios: {},
+  buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/tailwindcss', 'nuxt-ackee'],
+  modules: ['@nuxtjs/axios', '@nuxt/content'],
   ackee: {
-    server: 'https://ackee.zeus.numli.net',
-    domainId: '52aada0a-db2d-439d-aea2-c7434e32b21c',
-    ignoreLocalhost: false,
+    server: process.env.ACKEE_SERVER || '',
+    domainId: process.env.ACKEE_DOMAIN_ID || '',
+    ignoreLocalhost: true,
     detailed: true,
   },
-  /*
-   ** Build configuration
-   */
-
   build: {
-    /*
-     ** You can extend webpack config here
-     */
     extend(config, ctx) {},
   },
 }
