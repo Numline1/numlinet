@@ -60,7 +60,14 @@
         <span class="text-orange-400">backend.PostgreSQL</span>,
       </p>
       <p class="pl-24"><span class="text-orange-400">backend.MongoDB</span>,</p>
+      <p class="pl-24">
+        <span class="text-orange-400">frontend.AlpineJS</span>,
+      </p>
+      <p class="pl-24"><span class="text-orange-400">frontend.VueJS</span>,</p>
       <p class="pl-24"><span class="text-orange-400">frontend.NuxtJS</span>,</p>
+      <p class="pl-24">
+        <span class="text-orange-400">frontend.TailwindCSS</span>,
+      </p>
       <p class="pl-24">
         <span class="text-orange-400">devops.Kubernetes</span>,
       </p>

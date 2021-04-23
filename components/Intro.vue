@@ -2,7 +2,7 @@
   <div class="mt-24">
     <div class="flex flex-col items-center">
       <p class="px-8 text-6xl font-bold leading-tight text-center">
-        Senior backend
+        Senior fullstack
         <br />
         engineer
       </p>

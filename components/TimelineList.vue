@@ -5,7 +5,7 @@
     <div class="container flex flex-col mx-auto mt-16">
       <timeline-list-entry
         v-for="timelineEntry in timelineEntries"
-        :key="timelineEntry.id"
+        :key="timelineEntry.slug"
         :timeline-entry="timelineEntry"
       ></timeline-list-entry>
     </div>
@@ -29,7 +29,26 @@ export default {
   data: () => ({
     timelineEntries: [
       {
-        id: 1,
+        slug: 'megaverse',
+        company: 'Megaverse',
+        position: 'Lead engineer',
+        hashtags: ['laravel', 'cloud', 'ansible', 'vuejs'],
+        quotes: [
+          {
+            id: 1,
+            text:
+              'Adult industry is an evergrowing part of the world. Megaverse was made to bring technological innovation and stir the waters, allowing for better experience and monetization of amateur content.',
+            reference: {
+              icon: '/icons/megaverse.png',
+              title: 'megaverse.be',
+              subtitle: null,
+              url: 'https://megaverse.be',
+            },
+          },
+        ],
+      },
+      {
+        slug: 'donner_consulting_group',
         company: 'Donner Consulting Group',
         position: 'Lead backend engineer',
         hashtags: [
@@ -77,7 +96,7 @@ export default {
         ],
       },
       {
-        id: 2,
+        slug: 'kbs_development',
         company: 'KBS Development',
         position: 'Backend engineer',
         hashtags: ['laravel', 'jsonapi', 'nodejs', 'vuejs', 'devops'],
@@ -107,7 +126,7 @@ export default {
         ],
       },
       {
-        id: 3,
+        slug: 'hewlett_packard_enterprise',
         company: 'Hewlett Packard Enterprise',
         position: 'Asset management engineer',
         hashtags: ['yii', 'mssql', 'itil'],
@@ -126,7 +145,7 @@ export default {
         ],
       },
       {
-        id: 4,
+        slug: 'adecco_group_ajilon_slovakia',
         company: 'Adecco Group (Ajilon Slovakia)',
         position: 'Linux/Unix support engineer',
         hashtags: ['linux', 'unix', 'hpux', 'aix', 'solaris', 'redhat'],
