@@ -15,7 +15,7 @@
           <div class="p-4">
             <h2 class="text-2xl">{{ article.title }}</h2>
             <p class="mb-8 text-sm text-gray-700">
-              Created at: {{ humanDate(article.createdAt) }}
+              Published {{ article.publishedAt | diffForHumans }}
             </p>
             <p>{{ article.description }}</p>
           </div>
@@ -32,9 +32,21 @@
 
 <script>
 import Pagination from '@/components/blog/Pagination'
+import dayjs from 'dayjs'
+import relativeTime from 'dayjs/plugin/relativeTime'
+
 export default {
   components: {
     Pagination,
+  },
+  filters: {
+    diffForHumans: (date) => {
+      if (!date) {
+        return null
+      }
+
+      return dayjs(date).fromNow()
+    },
   },
   props: {
     articles: {
@@ -50,11 +62,8 @@ export default {
       default: 5,
     },
   },
-  methods: {
-    humanDate(date) {
-      const options = { year: 'numeric', month: 'long', day: 'numeric' }
-      return new Date(date).toLocaleDateString('en', options)
-    },
+  created() {
+    dayjs.extend(relativeTime)
   },
 }
 </script>

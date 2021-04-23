@@ -2,6 +2,7 @@
 title: Dear recruiters, you're just the worst...
 description: Engineers POV on being a "recruit" and how it makes me want to delete all business social networks
 imgSmall: /content/dear-recruiters-you-re-just-the-worst/img_small.jpg
+publishedAt: 1608064090000
 ---
 
 I've been in the software engineering industry for over 10 years. I've met with dozens of recruiters, hiring agencies, HR representatives - all sorts of people and companies. All of these experiences were vastly diverse, ranging from great and relaxed business chats to "why in the hell am I still sitting here" types of onset existential crises. What made the difference?

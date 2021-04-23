@@ -2,6 +2,7 @@
 title: Scaling Laravel and finding bottlenecks
 description: Technical analysis of Laravel scaling and a story about bottleneck search, Nginx & PHP-FPM stack optimization and ad-hoc devops
 imgSmall: /content/scaling-laravel-and-finding-bottlenecks/img_small.jpg
+publishedAt: 1606572855000
 ---
 
 Scaling applications can be a daunting task, especially with PHP. This is not going to be an article about "why PHP sucks", but rather a lengthy journal of many steps taken by a team of developers to optimize an app written using PHP (and Laravel). The end result would likely be the same here, no matter what language or framework was used, even though PHP can be the bottleneck in many cases similar to ours.

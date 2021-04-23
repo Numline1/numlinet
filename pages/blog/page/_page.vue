@@ -21,7 +21,11 @@ export default {
 
     const articlesPerPage = 6
 
-    const allArticles = await $content('articles').fetch()
+    const allArticles = await $content('articles')
+      .where({
+        publishedAt: { $lt: Date.now() },
+      })
+      .fetch()
 
     const articleCount = allArticles.length
 
@@ -41,8 +45,11 @@ export default {
     const lastPageCount = articleCount % articlesPerPage
 
     const paginatedArticles = await $content('articles')
-      .only(['title', 'slug', 'description', 'imgSmall', 'createdAt'])
-      .sortBy('createdAt', 'desc')
+      .only(['title', 'slug', 'description', 'imgSmall', 'publishedAt'])
+      .where({
+        publishedAt: { $lt: Date.now() },
+      })
+      .sortBy('publishedAt', 'desc')
       .skip(articlesToSkip())
       .limit(articlesPerPage)
       .fetch()

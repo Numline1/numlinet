@@ -3,8 +3,11 @@
     <article class="col-span-3">
       <h1 class="mb-2 text-3xl">{{ article.title }}</h1>
 
-      <p class="mb-8 text-sm text-gray-700">
-        Created at: {{ humanDate(article.createdAt) }}
+      <p
+        class="mb-8 text-sm text-gray-700"
+        :title="article.publishedAt | extendedDateAndTime"
+      >
+        Published {{ article.publishedAt | diffForHumans }}
       </p>
 
       <nuxt-content class="text-lg leading-8" :document="article" />
@@ -25,13 +28,35 @@
 </template>
 
 <script>
+import dayjs from 'dayjs'
+import relativeTime from 'dayjs/plugin/relativeTime'
+
 export default {
+  filters: {
+    diffForHumans: (date) => {
+      if (!date) {
+        return null
+      }
+
+      return dayjs(date).fromNow()
+    },
+    extendedDateAndTime: (date) => {
+      if (!date) {
+        return null
+      }
+
+      return dayjs(date).format('MMM D YYYY - h:mA')
+    },
+  },
   async asyncData({ $content, params }) {
     const article = await $content('articles', params.slug).fetch()
 
     const latestArticles = await $content('articles')
+      .where({
+        publishedAt: { $lt: Date.now() },
+      })
       .only(['title', 'slug'])
-      .sortBy('createdAt', 'asc')
+      .sortBy('publishedAt', 'desc')
       .fetch()
 
     return {
@@ -42,11 +67,8 @@ export default {
   head() {
     return { title: this.article.title + ' | ' + process.env.npm_package_name }
   },
-  methods: {
-    humanDate(date) {
-      const options = { year: 'numeric', month: 'long', day: 'numeric' }
-      return new Date(date).toLocaleDateString('en', options)
-    },
+  created() {
+    dayjs.extend(relativeTime)
   },
 }
 </script>
