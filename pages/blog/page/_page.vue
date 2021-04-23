@@ -54,7 +54,7 @@ export default {
     }
   },
   head: {
-    title: 'Blog' + ' | ' + process.env.npm_package_name,
+    title: 'Blog | Numlinet',
   },
 }
 </script>
