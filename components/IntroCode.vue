@@ -1,6 +1,6 @@
 <template>
   <div
-    class="container flex flex-col pb-8 mx-auto mt-32 text-lg text-gray-400 bg-primary-gray font-code rounded-md"
+    class="container flex flex-col pb-8 mx-auto mt-32 text-lg text-gray-400 rounded-md bg-primary-gray font-code"
   >
     <div class="flex p-4">
       <div class="w-4 h-4 bg-red-500 rounded-full"></div>
