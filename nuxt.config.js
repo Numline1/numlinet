@@ -18,8 +18,7 @@ export default {
       },
       {
         rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap',
+        href: 'https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap',
       },
     ],
   },
@@ -27,7 +26,7 @@ export default {
   css: [],
   plugins: [],
   buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/tailwindcss', 'nuxt-ackee'],
-  modules: ['@nuxtjs/axios', '@nuxt/content'],
+  modules: ['@nuxtjs/axios'],
   ackee: {
     server: process.env.ACKEE_SERVER || '',
     domainId: process.env.ACKEE_DOMAIN_ID || '',
