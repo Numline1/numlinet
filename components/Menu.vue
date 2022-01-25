@@ -10,7 +10,6 @@
         ><img class="h-6" src="/icons/github.svg" alt="GitHub"
       /></a>
     </li>
-    <li><NuxtLink to="/blog">Blog</NuxtLink></li>
     <li><NuxtLink to="/#contact">Contact</NuxtLink></li>
   </ul>
 </template>
