@@ -7,9 +7,9 @@
         class="flex flex-col items-center mt-8 text-xl text-center md:items-end md:w-1/2 md:mt-0 md:mr-16 md:text-right"
       >
         <p>
-          Experienced backend software engineer with over 10 years in the field.
-          Skilled in a broad range of languages, tools, operating systems and
-          cloud-based platforms.
+          Experienced fullstack software engineer with over 10 years in the
+          field. Skilled in a broad range of languages, tools, and cloud-based
+          platforms.
         </p>
 
         <p class="mt-8">
