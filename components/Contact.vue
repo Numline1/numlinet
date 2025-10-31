@@ -5,6 +5,10 @@
     >
       <div class="w-full mt-8 md:w-1/2 md:mt-0">
         <form class="flex flex-col" target="_self" @submit.prevent="contact">
+          <label style="position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;" for="website">Website</label>
+          <input id="website" name="website" v-model="antispamInput" autocomplete="off" tabindex="-1" />
+          <input type="hidden" name="field1" :value="antispamToken" />
+
           <label for="email">E-mail</label>
           <input
             id="email"
@@ -59,10 +63,20 @@ export default {
     return {
       email: '',
       message: '',
+
       submitting: false,
       submitted: false,
       error: '',
+
+      antispamInput: '',
+      antispamToken: '',
+      antispamInitializedAt: null
     }
+  },
+
+  mounted() {
+    this.antispamToken = Math.random().toString(36).slice(2)
+    this.antispamInitializedAt = Date.now()
   },
 
   methods: {
@@ -73,6 +87,18 @@ export default {
         return false
       }
 
+      if (this.antispamInput && this.antispamInput.trim().length > 0) {
+        return this.submitted = true
+      }
+
+      if (! this.antispamToken) {
+        return this.submitted = true
+      }
+
+      if (Date.now() - Number(this.antispamInitializedAt || 0) < 5000) {
+        return this.submitted = true
+      }
+
       this.submitting = true
 
       this.$axios
@@ -80,16 +106,17 @@ export default {
           email: this.email,
           message: this.message,
         })
-        .then(function (response) {
+        .then(() => {
           this.submitted = true
           this.error = ''
         })
-        .catch(function (response) {
+        .catch(response => {
           this.submitted = false
           this.error = response.error
         })
-
-      this.submitted = true
+        .finally(() => {
+          this.submitting = false
+        })
     },
   },
 }
